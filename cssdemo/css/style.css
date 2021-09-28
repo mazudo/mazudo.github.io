@@ -23,3 +23,12 @@ ul.nav li a {
     color: black;
     text-decoration: none;
 }
+
+ul.nav li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active {
+    background-color: bisque;
+}
