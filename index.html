@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sudo Sensei</title>
+    <title>Sudo Sensei | Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/uyt3isb.css">
 </head>
 
 <body>
     <!--navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark navcolor">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
                 <img src="images/totoro.png" alt="Totoro icon" style="height:50px"></a>
@@ -24,7 +26,7 @@
                         <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About me</a>
+                        <a class="nav-link" href="about.html">About me</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="philosophy.html">Teaching Philosophy</a>
@@ -34,9 +36,9 @@
                         Student Projects
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="#">Web Design 1</a></li>
-                            <li><a class="dropdown-item" href="#">Programming 1</a></li>
-                            <li><a class="dropdown-item" href="#">Physical Meets Digital (Arduino)</a></li>
+                            <li><a class="dropdown-item" href="webdesign1.html">Web Design 1</a></li>
+                            <li><a class="dropdown-item" href="programming1.html">Programming 1</a></li>
+                            <li><a class="dropdown-item" href="physicalmeetsdigital.html">Physical Meets Digital (Arduino)</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -47,87 +49,91 @@
         </div>
     </nav>
     <main>
-        <h1>Welcome to Sudo sensei's website!</h1>
-        <blockquote>“People will forget what you said, people will forget what you did, but people will never forget how you made them feel” – Maya Angelou</blockquote>
-        <!--nifty carousel-->
-        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <div>
+            <h1 style="text-align: center;"><b>Welcome to Sudo sensei's website!</b></h1>
+            <blockquote style="text-align: center;">“People will forget what you said, people will forget what you did, but people will never forget how you made them feel” – Maya Angelou</blockquote>
+            <!--nifty carousel-->
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100" src="images/ilya-pavlov-unsplash2.jpg" alt="slide 1, lines of code">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Programming 1</h1>
+                                <p>Python and Javascript</p>
+                                <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/lee-campbell-unsplash2.jpg" alt="web design">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Web Design 1</h1>
+                                <p>HTML, CSS, Javascript</p>
+                                <!--<p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="images/sahand-babali-unsplash2.jpg" alt="arduino circuit">
+                        <div class="container">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h1>Physical Meets Digital</h1>
+                                <p>Arduino, circuits, and sensors</p>
+                                <!--<p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--carousel controls-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="d-block w-100" src="images/ilya-pavlov-unsplash2.jpg" alt="slide 1, lines of code">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Programming 1</h1>
-                            <p>Python and Javascript</p>
-                            <!--<p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/lee-campbell-unsplash2.jpg" alt="web design">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Web Design 1</h1>
-                            <p>HTML, CSS, Javascript</p>
-                            <!--<p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>-->
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img class="d-block w-100" src="images/sahand-babali-unsplash2.jpg" alt="arduino circuit">
-                    <div class="container">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h1>Physical Meets Digital</h1>
-                            <p>Arduino, circuits, and sensors</p>
-                            <!--<p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--carousel controls-->
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-        <div class="container marketing">
+            <div class="container marketing">
 
-            <!-- Three columns of text below the carousel -->
-            <div class="row">
-                <div class="col-lg-4">
-                    <h2>Programming 1</h2>
-                    <p>Students create fun video games in Python or Javascript by applying fundamental programming concepts such as variables, math operators, decision trees, loops, user interface, etc.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+                <!-- Three columns of text below the carousel -->
+                <div class="row">
+                    <div class="col-lg-4">
+                        <h2>Programming 1</h2>
+                        <p>Students create fun video games in Python or Javascript by applying fundamental programming concepts such as variables, math operators, decision trees, loops, user interface, etc.</p>
+                        <p><a class="btn btn-secondary" href="programming1.html">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <h2>Web Design 1</h2>
+                        <p>Students design personal websites and redesign real small business websites that need a little help by applying fundamental web design concepts in HTML, CSS, and Javascript.</p>
+                        <p><a class="btn btn-secondary" href="webdesign1.html">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
+                    <div class="col-lg-4">
+                        <h2>Physical Meets Digital (Arduino)</h2>
+                        <p>Students learn how build useful real-world solutions, such as a covid-19 six-foot proximity alert device, by building circuits with physical input/output sensors and process them with C++ code on the Arduino microcontroller.</p>
+                        <p><a class="btn btn-secondary" href="physicalmeetsdigital.html">View details &raquo;</a></p>
+                    </div>
+                    <!-- /.col-lg-4 -->
                 </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <h2>Web Design 1</h2>
-                    <p>Students design personal websites and redesign real small business websites that need a little help by applying fundamental web design concepts in HTML, CSS, and Javascript.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div>
-                <!-- /.col-lg-4 -->
-                <div class="col-lg-4">
-                    <h2>Physical Meets Digital (Arduino)</h2>
-                    <p>Students learn how build useful real-world solutions, such as a covid-19 six-foot proximity alert device, by building circuits with physical input/output sensors and process them with C++ code on the Arduino microcontroller.</p>
-                    <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-                </div>
-                <!-- /.col-lg-4 -->
+                <!-- /.row -->
             </div>
-            <!-- /.row -->
+            <!-- /.container -->
+            <!-- FOOTER -->
         </div>
-        <!-- /.container -->
-        <!-- FOOTER -->
-        <footer class="container">
+        <br>
+        <br>
+        <footer>
             <!--<p class="float-end"><a href="#">Back to top</a></p>-->
-            <p>&copy; Sudo Labs &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+            <p>&copy; Sudo Labs &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> &middot; Website redsign by Darioush Clapp</p>
         </footer>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
