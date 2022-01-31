@@ -19,7 +19,7 @@
 
     <!-- absolute position -->
     <!--https://www.w3schools.com/cssref/pr_class_position.asp-->
-    <div style="position:absolute; top:340px; left: 100px;">
+    <div style="position:absolute; top:360px; left: 300px;">
         <h3>Eevee's full belly</h3>
         <meter id="belly-meter" min="0" max="10" value="5"></meter>
         <p id="belly-paragraph">5</p>
@@ -27,6 +27,13 @@
         <button id="belly-button" onclick="feedPet();">Feed me!</button>
     </div>
     <!--add state, meter, paragraph, button (e.g. Eevee's happiness)-->
+    <div style="position:absolute; top:360px; left: 500px;">
+        <h3>Eevee's full belly</h3>
+        <meter id="mood-meter" min="0" max="10" value="5"></meter>
+        <p id="mood-paragraph">5</p>
+        <!-- if you're done - change the pet condition text when button is clicked-->
+        <button id="mood-button" onclick="petPet();">Pet me!</button>
+    </div>
 
 
 
