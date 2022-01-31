@@ -13,17 +13,19 @@
         <h1>This is Eevee, she is my pokemon pet</h1>
         <p>Feed and hug Eevee to keep her happy</p>
         <img src="images/eevee-happy.png" alt="Happy Eevee" style="width:200px;">
+        <p id="pet-condition">Eevee is happy!</p>
         <!-- TODO: Add pet condition paragraph with id-->
     </div>
 
     <!-- absolute position -->
     <!--https://www.w3schools.com/cssref/pr_class_position.asp-->
-    <h3>Eevee's full belly</h3>
-    <meter id="belly-meter" min="0" max="10" value="5"></meter>
-    <p id="belly-paragraph">5</p>
-    <!-- if you're done - change the pet condition text when button is clicked-->
-    <button id="belly-button">Feed me!</button>
-
+    <div style="position:absolute; top:340px; left: 100px;">
+        <h3>Eevee's full belly</h3>
+        <meter id="belly-meter" min="0" max="10" value="5"></meter>
+        <p id="belly-paragraph">5</p>
+        <!-- if you're done - change the pet condition text when button is clicked-->
+        <button id="belly-button" onclick="feedPet();">Feed me!</button>
+    </div>
     <!--add state, meter, paragraph, button (e.g. Eevee's happiness)-->
 
 
