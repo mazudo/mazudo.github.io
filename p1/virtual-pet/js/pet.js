@@ -48,6 +48,17 @@ function refreshUI() {
     moodMeter.value = mood;
     let moodParagraph = document.getElementById("mood-paragraph");
     moodParagraph.innerHTML = mood;
+
+    // update pet image and paragraph
+    let petImg = document.getElementById("pet-img");
+    let petParagraph = document.getElementById("pet-condition");
+    if (mood <= 5 && belly <= 5) {
+        petImg.src = "images/psyduck.jpg";
+        petParagraph.innerHTML = "You are dead to me";
+    } else { // default image and state
+        petImg.src = "images/eevee-happy.png"
+        petParagraph.innerHTML = "Happy Eevee";
+    }
 }
 
 let petTimer = setInterval(decreasePet, 1000);
