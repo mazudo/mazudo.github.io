@@ -16,14 +16,16 @@ let playerSpeed = 2;
 // ball position and movement
 let ballX = 100;
 let ballY = 100;
-let ballXDir = 0;
+let ballXDir = 3;
 let ballYDir = 2;
 let ballRadius = 15;
 
+// draw player with global player x and y coords
 function drawPlayer() {
     ctx.fillRect(playerX, playerY, 100, 20);
 }
 
+// move player
 function movePlayer() {
     playerX += (playerSpeed * playerXDir);
 
@@ -35,6 +37,7 @@ function movePlayer() {
     }
 }
 
+// draw ball with global ball x and y coords
 function drawBall() {
     // draw a filled circle at xBallPos and yBallPos
     ctx.beginPath();
@@ -42,17 +45,25 @@ function drawBall() {
     ctx.fill();
 }
 
+// move ball
 function moveBall() {
     ballY += ballYDir;
+    ballX += ballXDir;
 }
 
+// check for ball collisions and change directions
 function checkBallCollision() {
     // check vertical wall
     if ((ballY > 500 - ballRadius) || (ballY < 0 + ballRadius)) {
         ballYDir = ballYDir * -1;
     }
+    // check horizontal wall
+    if ((ballX > 500 - ballRadius) || (ballX < 0 + ballRadius)) {
+        ballXDir = ballXDir * -1;
+    }
 }
 
+// refresh entire UI
 function refreshUI() {
     ctx.clearRect(0, 0, 500, 500);
     movePlayer();
@@ -112,23 +123,4 @@ function moveHorizontal() {
     }
 }
 
-// #1 rect moving vertically then wrapping around
-function moveVertical() {
-
-}
-
-// #2 rect bouncing horizontally
-function bounceHorizontal() {
-
-}
-
-// #3 ball bouncing horizontally
-function ballBounce() {
-
-}
-
-// extra challenge - have fun, bounce horizontally, ball grow and shrink,
-
-//setInterval(moveHorizontal, 10);
 setInterval(refreshUI, 10);
-//setInterval(refreshUI, 10);
