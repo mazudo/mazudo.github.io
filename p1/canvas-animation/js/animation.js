@@ -12,17 +12,19 @@ let playerY = 250;
 let playerXDir = 0;
 let playerYDir = 0;
 let playerSpeed = 2;
+const PADDLE_WIDTH = 100;
+const PADDLE_HEIGHT = 20;
 
 // ball position and movement
 let ballX = 100;
 let ballY = 100;
 let ballXDir = 3;
 let ballYDir = 2;
-let ballRadius = 15;
+const BALL_RADIUS = 15;
 
 // draw player with global player x and y coords
 function drawPlayer() {
-    ctx.fillRect(playerX, playerY, 100, 20);
+    ctx.fillRect(playerX, playerY, PADDLE_WIDTH, PADDLE_HEIGHT);
 }
 
 // move player
@@ -32,8 +34,8 @@ function movePlayer() {
     //edge check
     if (playerX < 0) {
         playerX = 0;
-    } else if (playerX > 500 - 100) {
-        playerX = 500 - 100;
+    } else if (playerX > 500 - PADDLE_WIDTH) {
+        playerX = 500 - PADDLE_WIDTH;
     }
 }
 
@@ -41,7 +43,7 @@ function movePlayer() {
 function drawBall() {
     // draw a filled circle at xBallPos and yBallPos
     ctx.beginPath();
-    ctx.arc(ballX, ballY, ballRadius, 0, 2 * Math.PI);
+    ctx.arc(ballX, ballY, BALL_RADIUS, 0, 2 * Math.PI);
     ctx.fill();
 }
 
@@ -54,11 +56,11 @@ function moveBall() {
 // check for ball collisions and change directions
 function checkBallCollision() {
     // check vertical wall
-    if ((ballY > 500 - ballRadius) || (ballY < 0 + ballRadius)) {
+    if ((ballY > 500 - BALL_RADIUS) || (ballY < 0 + BALL_RADIUS)) {
         ballYDir = ballYDir * -1;
     }
     // check horizontal wall
-    if ((ballX > 500 - ballRadius) || (ballX < 0 + ballRadius)) {
+    if ((ballX > 500 - BALL_RADIUS) || (ballX < 0 + BALL_RADIUS)) {
         ballXDir = ballXDir * -1;
     }
 }
