@@ -1,6 +1,7 @@
 // get canvas item
 let myCanvas = document.getElementById("my-canvas");
 let ctx = myCanvas.getContext("2d");
+let emoji = document.getElementById("emoji");
 
 // get paragraph items
 let keydownOutput = document.getElementById("keydown-output");
@@ -14,6 +15,10 @@ let playerYDir = 0;
 let playerSpeed = 2;
 const PADDLE_WIDTH = 100;
 const PADDLE_HEIGHT = 20;
+
+// image settings
+const IMG_WIDTH = 40;
+const IMG_HEIGHT = 40;
 
 // ball position and movement
 let ballX = 100;
@@ -45,6 +50,10 @@ function drawBall() {
     ctx.beginPath();
     ctx.arc(ballX, ballY, BALL_RADIUS, 0, 2 * Math.PI);
     ctx.fill();
+}
+
+function drawImage() {
+    ctx.drawImage(emoji, ballX, ballY, IMG_WIDTH, IMG_HEIGHT);
 }
 
 // move ball
@@ -83,7 +92,8 @@ function refreshUI() {
     // animate ball
     checkBallCollision();
     moveBall();
-    drawBall();
+    //drawBall();
+    drawImage();
 }
 
 
