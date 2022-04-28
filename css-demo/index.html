@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Demo</title>
+    <style>
+        body {
+            background-color: rgb(231, 213, 50);
+        }
+        
+        p {
+            color: purple;
+        }
+        /*adding table border*/
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        
+        #red-text {
+            color: red;
+        }
+        
+        .small-text {
+            font-size: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Some HTML stuff first</h1>
+    <ul>
+        <li>Apples</li>
+        <li>Oranges</li>
+        <li>Banana</li>
+    </ul>
+    <!--this is how you do ordered lists-->
+    <h2>Top movies</h2>
+    <ol>
+        <li>My Neighbor Totoro</li>
+        <li>The half of it</li>
+        <li>Inception</li>
+    </ol>
+
+    <h2>Student birthdays</h2>
+    <table>
+        <tr>
+            <th>Last Name</th>
+            <th>First Name</th>
+            <th>Birthday</th>
+        </tr>
+        <tr>
+            <td>A</td>
+            <td>Cooper</td>
+            <td>02/01</td>
+        </tr>
+    </table>
+
+    <h2>Let's do some internal css!</h2>
+    <p style="color:blue">I want this text to be blue</p>
+    <p>I want this text to be red</p>
+    <p style="font-size:50px">I want this text to be really big</p>
+    <p>I want this to be really small</p>
+    <p style="color:orange; font-size:24px; text-align:center">I want this to be orange, 24px, and centered</p>
+
+    <h2>Let's do some internal css with selectors</h2>
+    <p>make this blue</p>
+    <p id="red-text">make this red</p>
+    <p class="small-text">make this small</p>
+    <p class="small-text">make this small too</p>
+    <p>make this orange, 24px, and centered</p>
+
+
+</body>
+
+</html>
