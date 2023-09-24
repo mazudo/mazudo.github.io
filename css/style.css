@@ -2,6 +2,10 @@ body {
     background-color: beige;
 }
 
+.secondary-background {
+    background-color: white;
+}
+
 .center-text {
     text-align: center;
 }
