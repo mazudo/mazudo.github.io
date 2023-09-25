@@ -6,6 +6,10 @@ body {
     background-color: white;
 }
 
+.bg-orange {
+    background-color: darkorange;
+}
+
 .center-text {
     text-align: center;
 }
