@@ -1,5 +1,5 @@
 body {
-    background-color: ghostwhite;
+    background-color: whitesmoke;
 }
 
 .secondary-background {
@@ -8,6 +8,37 @@ body {
 
 .bg-orange {
     background-color: darkorange;
+}
+
+.primary-bg {
+    background-color: darkorange;
+    color: white;
+}
+
+.secondary-bg {
+    background-color: navy;
+    color: white;
+}
+
+.tertiary-bg {
+    background-color: indigo;
+    color: white;
+}
+
+.primary-text {
+    color: darkorange;
+}
+
+.secondary-text {
+    color: navy;
+}
+
+.tertiary-text {
+    color: indigo;
+}
+
+.white-text {
+    color: white;
 }
 
 .center-text {
