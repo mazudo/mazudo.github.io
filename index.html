@@ -131,12 +131,11 @@
         <div class="row">
             <div class="col-sm">
                 <div class="jumbotron">
-                    <img src="images/highfive-dark-thinnest.png" alt="teacher and student high fiving"
-                        style="width:100%">
+                    <img src="images/high-five-1.jpeg" alt="teacher and student high fiving" style="width:100%">
                     <div class="hovering">
                         <h3 style="text-shadow: 1px 1px black">Fueling minds with the power of code.<br> One student
                             at a time.</h3>
-                        <button id="startSurvey" class="btn btn-primary secondary-bg" type="button">Book Now</button>
+                        <a id="startSurvey" class="btn btn-primary secondary-bg" href="contact.html">Book Now</a>
                     </div>
 
                 </div>
@@ -203,98 +202,6 @@
 
 
     </div>
-
-    <!-- Customer Sign up -->
-    <script>
-        document.getElementById("startSurvey").addEventListener("click", function () {
-            // Open a new browser window for the survey
-            const surveyWindow = window.open("", "Tutor Survey", "width=400,height=400");
-
-            // Construct the survey form in the new window
-            const surveyHTML = `
-            <div style="margin: 30px 10px">
-                <h2>Customer Sign up</h2>
-                <p>Hello! Thank you for interest in booking with Sudo Sensei Labs! <br><br>
-                    I am still getting my tutoring business up and running so currently have capacity to only take 2 students. 
-                    I plan to expand after Thanksgiving break 2023.
-                    If you could answer the following questions, I will get back to you ASAP on my rates and availability.
-                     </p>
-                <hr><br>
-                <form id="surveyForm">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" required><br>
-
-                    <p>Which services are you interested in?</p>
-
-                    <input type="checkbox" id="inPerson" name="inPerson" value="In-Person Tutoring">
-                    <label for="inPerson">In-Person Tutoring</label><br>
-
-                    <input type="checkbox" id="virtual" name="virtual" value="Virtual Tutoring">
-                    <label for="virtual">Virtual Tutoring</label><br>
-              
-                    <input type="checkbox" id="python" name="python" value="Beginner Python Programming Class">
-                    <label for="python">Beginner Python Programming Class</label><br>
-
-                    <input type="checkbox" id="apClass" name="apClass" value="Computer Science AP Class">
-                    <label for="apClass">Computer Science AP Class</label><br>
-
-                    <input type="checkbox" id="aiMl" name="aiMl" value="Advanced AI and ML Programming Class">
-                    <label for="aiMl">Advanced AI and ML Programming Class</label><br>
-
-                    <input type="checkbox" id="independent" name="independent" value="Independent Curriculum">
-                    <label for="independent">Student-led Independent Class</label><br>
-
-                    <input type="checkbox" id="github" name="github" value="Github Portfolio">
-                    <label for="apClass">Build a Github Portfolio</label><br>
-
-                    <input type="checkbox" id="resume" name="resume" value="Internship Resume">
-                    <label for="aiMl">Internship Resume Writing</label><br>
-
-                    <input type="checkbox" id="interview" name="interview" value="Internship Interview">
-                    <label for="independent">Internship Interview Prep and Practice</label><br><br>
-
-
-                    <label for="feedback">Anything else?</label><br>
-                    <textarea id="feedback" name="feedback" rows="5"></textarea><br><br>
-
-                    <p><em>Note, when you click the submit button below your answers will be opened in your default mail application to send.
-                    If you prefer to send your answers a different way, please copy and paste the email body content first then send.
-                    </em></p>
-
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-            `;
-
-            surveyWindow.document.body.innerHTML = surveyHTML;
-
-            // Handle form submission in the new window
-            surveyWindow.document.getElementById("surveyForm").addEventListener("submit", function (event) {
-                event.preventDefault();
-
-                // Gather form data
-                const formData = new FormData(event.target);
-
-                // Convert form data to an object
-                const formDataObject = {};
-                formData.forEach((value, key) => {
-                    formDataObject[key] = value;
-                });
-
-                // Replace with the desired email address
-                const emailRecipient = 'masato.sudo@gmail.com';
-
-                // Create a mailto link to open the user's email client with the survey results
-                const mailtoLink = `mailto:${emailRecipient}?subject=Tutor Survey Results&body=${encodeURIComponent(JSON.stringify(formDataObject))}`;
-
-                // Open the user's email client
-                window.location.href = mailtoLink;
-
-                // Close the survey window
-                surveyWindow.close();
-            });
-        });
-    </script>
 
 </body>
 
