@@ -119,6 +119,32 @@
             <button type="submit">Submit</button>
         </form>
     </div>
+
+    <script>
+        // Handle form submission in the new window
+        document.getElementById("surveyForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Gather form data
+            const formData = new FormData(event.target);
+
+            // Convert form data to an object
+            const formDataObject = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+
+            // Replace with the desired email address
+            const emailRecipient = 'masato.sudo@gmail.com';
+
+            // Create a mailto link to open the user's email client with the survey results
+            const mailtoLink = `mailto:${emailRecipient}?subject=Tutor Survey Results&body=${encodeURIComponent(JSON.stringify(formDataObject))}`;
+
+            // Open the user's email client
+            window.location.href = mailtoLink;
+
+        });
+    </script>
 </body>
 
 </html>
